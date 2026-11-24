@@ -7,3 +7,4 @@ research/
 src/img/hero-raw.png
 .vercel
 .env*
+report/
