@@ -1,0 +1,23 @@
+{
+  "buildCommand": "python3 build.py",
+  "outputDirectory": "site",
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/uslugi/profosmotry",
+      "destination": "/profosmotry/",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    }
+  ]
+}
