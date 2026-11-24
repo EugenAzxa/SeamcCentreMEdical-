@@ -488,6 +488,10 @@ def main():
     for s in SERVICES: service_page(s)
     for d in DOCTORS: doctor_page(d)
     for slug, (t, desc, body) in pages.items(): write(slug, t, desc, body)
+    nf = page_hero([], "Страница не найдена", "Возможно, адрес изменился после обновления сайта. Выберите нужный раздел или позвоните нам.",
+                   f'<div class="cta-row" style="margin-top:24px"><a class="btn btn-buoy" href="/uslugi/">Справки и комиссии {I("arrow")}</a><a class="btn btn-line" href="tel:{TEL}">{I("phone")}{PHONE}</a></div>')
+    with open(os.path.join(OUT, "404.html"), "w", encoding="utf-8") as f:
+        f.write(layout("404", "Страница не найдена", "Страница не найдена", nf + '<section class="sec"><div class="wrap"><div class="grid">' + "".join(svc_card(x, False) for x in by_group("komissii")) + "</div></div></section>"))
     shutil.copy(os.path.join(ROOT, "src", "style.css"), OUT)
     shutil.copy(os.path.join(ROOT, "src", "main.js"), OUT)
     os.makedirs(os.path.join(OUT, "img"))

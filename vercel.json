@@ -4,6 +4,11 @@
   "trailingSlash": true,
   "redirects": [
     {
+      "source": "/uslugi/profosmotry/",
+      "destination": "/profosmotry/",
+      "permanent": true
+    },
+    {
       "source": "/uslugi/profosmotry",
       "destination": "/profosmotry/",
       "permanent": true

@@ -5,3 +5,5 @@ site/
 notes/
 research/
 src/img/hero-raw.png
+.vercel
+.env*
